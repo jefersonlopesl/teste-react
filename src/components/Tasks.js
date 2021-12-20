@@ -1,7 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const Tasks = () =>{
-  return <h1>tasks</h1>;
+import Task from "./Task";
+
+const Tasks = ({ tasks }) => {
+    return(
+      <>
+          {tasks.map((task) => (
+            <Task task={task} />
+          ))}
+      </>
+    );
 };
 
 export default Tasks;
